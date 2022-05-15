@@ -2,7 +2,7 @@
 https://tools.suckless.org/dmenu/
 
 ## patches
-- Line height
-- lines below prompt
-- Mouse support
+- center
+- border
+- lines below prompt and fullwidth
 - gruvbox theme
