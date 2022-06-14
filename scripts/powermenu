@@ -1,7 +1,8 @@
 #!/bin/sh
-case "$(echo "Poweroff \nReboot ﰇ\nSuspend ⏾\nCancel ﰸ" | dmenu)" in
+
+case "$(echo "Poweroff \nReboot 累\nSuspend ⏾\nCancel ﰸ" | dmenu)" in
     "Poweroff ") sudo poweroff ;;
-    "Reboot ﰇ") sudo reboot ;;
+    "Reboot 累") sudo reboot ;;
     "Suspend ⏾") sudo ZZZ -z ;;
     "Cancel ﰸ") exit ;;
     *) exit ;;
