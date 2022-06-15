@@ -52,14 +52,15 @@ install: all
 	sed "s/VERSION/$(VERSION)/g" < stest.1 > $(DESTDIR)$(MANPREFIX)/man1/stest.1
 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/dmenu.1
 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/stest.1
-	cp -f scripts/* ${DESTDIR}${PREFIX}/bin 
-	chmod 755 ${DESTDIR}${PREFIX}/bin/powermenu 
+	cp -f scripts/* $(DESTDIR)$(PREFIX)/bin 
+	chmod 755 $(DESTDIR)$(PREFIX)/bin/powermenu 
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/dmenu\
 		$(DESTDIR)$(PREFIX)/bin/dmenu_path\
 		$(DESTDIR)$(PREFIX)/bin/dmenu_run\
 		$(DESTDIR)$(PREFIX)/bin/stest\
+		$(DESTDIR)$(PREFIX)/bin/powermenu\
 		$(DESTDIR)$(MANPREFIX)/man1/dmenu.1\
 		$(DESTDIR)$(MANPREFIX)/man1/stest.1
 
