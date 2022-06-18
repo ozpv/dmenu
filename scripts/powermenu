@@ -1,6 +1,6 @@
 #!/bin/sh
 
-case "$(echo "Poweroff \nReboot 累\nSuspend ⏾\nCancel ﰸ" | dmenu)" in
+case "$(echo "Poweroff \nReboot 累\nSuspend ⏾\nCancel ﰸ" | dmenu -p "Uptime: $(uptime -p | sed -e 's/up //g')")" in
     "Poweroff ") sudo poweroff ;;
     "Reboot 累") sudo reboot ;;
     "Suspend ⏾") sudo ZZZ -z ;;
