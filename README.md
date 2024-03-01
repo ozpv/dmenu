@@ -13,6 +13,3 @@ git clone https://github.com/ozpv/dmenu
 cd dmenu
 sudo make install
 ```
-
-## powermenu installation
-See [dmenu/powermenu installation](https://github.com/ozpv/dotfiles#dmenupowermenu-installation)
