@@ -4,7 +4,7 @@ https://tools.suckless.org/dmenu/
 ## patches
 - center
 - border
-- lines below prompt and fullwidth
+- no input, lines below prompt, fullwidth
 - gruvbox theme
 
 ## installation
