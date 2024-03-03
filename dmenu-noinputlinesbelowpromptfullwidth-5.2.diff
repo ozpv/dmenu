@@ -11,7 +11,7 @@ diff -up dmenu/config.def.h dmenu-noinputlinesbelowpromptfullwidth/config.def.h
  	"monospace:size=10"
 diff -up dmenu/dmenu.c dmenu-noinputlinesbelowpromptfullwidth/dmenu.c
 --- dmenu/dmenu.c	2024-03-03 12:59:00.545293913 -0600
-+++ dmenu-noinputlinesbelowpromptfullwidth/dmenu.c	2024-03-03 13:31:59.732635827 -0600
++++ dmenu-noinputlinesbelowpromptfullwidth/dmenu.c	2024-03-03 15:06:12.469545907 -0600
 @@ -147,30 +147,32 @@ drawmenu(void)
  {
  	unsigned int curpos;
@@ -51,7 +51,7 @@ diff -up dmenu/dmenu.c dmenu-noinputlinesbelowpromptfullwidth/dmenu.c
  		/* draw vertical list */
  		for (item = curr; item != next; item = item->right)
 -			drawitem(item, x, y += bh, mw - x);
-+			drawitem(item, !draw_input ? x - mw : x - promptw, y += bh, mw);
++			drawitem(item, (!draw_input && prompt && *prompt) ? x - mw : x - promptw, y += bh, mw);
  	} else if (matches) {
  		/* draw horizontal list */
  		x += inputw;
