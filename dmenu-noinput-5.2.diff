@@ -1,6 +1,6 @@
-diff -up dmenu/config.def.h dmenu-no-input/config.def.h
---- dmenu/config.def.h	2024-03-03 12:12:57.801296496 -0600
-+++ dmenu-no-input/config.def.h	2024-03-03 10:00:59.974900500 -0600
+diff -up dmenu/config.def.h dmenu-noinput/config.def.h
+--- dmenu/config.def.h	2024-03-03 12:59:00.545293913 -0600
++++ dmenu-noinput/config.def.h	2024-03-03 10:00:59.974900500 -0600
 @@ -2,6 +2,7 @@
  /* Default settings; can be overriden by command line. */
  
@@ -9,10 +9,9 @@ diff -up dmenu/config.def.h dmenu-no-input/config.def.h
  /* -fn option overrides fonts[0]; default X11 font or font set */
  static const char *fonts[] = {
  	"monospace:size=10"
-Only in dmenu-no-input: config.h
-diff -up dmenu/dmenu.c dmenu-no-input/dmenu.c
---- dmenu/dmenu.c	2024-03-03 12:12:57.802296502 -0600
-+++ dmenu-no-input/dmenu.c	2024-03-03 12:15:44.416277776 -0600
+diff -up dmenu/dmenu.c dmenu-noinput/dmenu.c
+--- dmenu/dmenu.c	2024-03-03 12:59:00.545293913 -0600
++++ dmenu-noinput/dmenu.c	2024-03-03 12:15:44.416277776 -0600
 @@ -147,7 +147,7 @@ drawmenu(void)
  {
  	unsigned int curpos;
