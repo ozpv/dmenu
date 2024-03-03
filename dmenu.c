@@ -164,7 +164,7 @@ drawmenu(void)
 
 	if (prompt && *prompt) {
 		drw_setscheme(drw, scheme[SchemeSel]);
-		x  = drw_text(drw, x, 0, ((!draw_input) ? mw : promptw), bh, lrpad / 2, prompt, 0); 
+		x  = drw_text(drw, x, 0, !draw_input ? mw : promptw, bh, lrpad / 2, prompt, 0); 
 	}
 
 	if (draw_input) {
@@ -182,7 +182,7 @@ drawmenu(void)
 	if (lines > 0) {
 		/* draw vertical list */
 		for (item = curr; item != next; item = item->right)
-			drawitem(item, !draw_input ? x - mw : x - promptw, y += bh, mw);
+			drawitem(item, (!draw_input && prompt && *prompt) ? x - mw : x - promptw, y += bh, mw);
 	} else if (matches) {
 		/* draw horizontal list */
 		x += inputw;
