@@ -5,7 +5,7 @@ https://tools.suckless.org/dmenu/
 - center
 - border
 - no input, lines below prompt, fullwidth
-- gruvbox theme
+- mocha catppuccin theme
 
 ## installation
 ```
